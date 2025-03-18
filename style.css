@@ -89,12 +89,13 @@
 
 
     .third{
-        padding: 130px 20px;
+        padding: 30px 20px;
         background-image: url(./IMG/mobile-btn.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        text-align: center;
+        text-align: start;
+        color: white;
     }
 }
