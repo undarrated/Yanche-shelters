@@ -193,6 +193,20 @@
         </div>
     </section>
 
+
+    <section class="five">
+        <h2>Project Inquiry Form</h2>
+    <form id="contactForm">
+        <input type="text" id="company" placeholder="Company Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="location" placeholder="Location of Project" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <textarea id="message" placeholder="Your message here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+      
+
    
     <script>
         document.querySelectorAll('.faq-question').forEach(button => {
@@ -202,5 +216,54 @@
             });
         });
     </script>
+
+<script type="module">
+    // Import Firebase modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+  
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCHMmkNx0BO7f5jhtGgXyo82P9hjcuc7cw",
+      authDomain: "yanche-shelters.firebaseapp.com",
+      projectId: "yanche-shelters",
+      storageBucket: "yanche-shelters.appspot.com",
+      messagingSenderId: "245158535038",
+      appId: "1:245158535038:web:f7256fdb79ced86c929d2f",
+      databaseURL: "https://yanche-shelters-default-rtdb.firebaseio.com"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+  
+    // Handle form submission
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+  
+      const company = document.getElementById("company").value;
+      const email = document.getElementById("email").value;
+      const location = document.getElementById("location").value;
+      const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+  
+      const contactRef = ref(database, 'contacts/');
+      const newContactRef = push(contactRef);
+  
+      set(newContactRef, {
+        company,
+        email,
+        location,
+        phone,
+        message
+      }).then(() => {
+        alert("Form submitted successfully!");
+        document.getElementById("contactForm").reset();
+      }).catch((error) => {
+        alert("Error submitting form: " + error.message);
+      });
+    });
+  </script>
+  
 </body>
 </html>
