@@ -126,10 +126,44 @@
         padding: 20px;
     }
     .coma{
-        background-color: #131313d9;
+        background-color: #131313ef;
         padding: 10px;
         width: 100px;
         border-radius: 10px;
+    }
+
+    .faq-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .faq-item {
+        background: white;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .faq-question {
+        background: black;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        outline: none;
+    }
+    .faq-answer {
+        display: none;
+        padding: 15px;
+        background: #13131379;
+        border-top: 1px solid #ddd;
+        font-size: 16px;
+        color: black;
+    }
+    .faq-item.active .faq-answer {
+        display: block;
     }
 
 
