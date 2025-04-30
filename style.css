@@ -15,7 +15,7 @@
         justify-content: space-between;
         position: fixed;
         z-index: 999;
-        background-color: #022730;
+        background-color: #23abdd54;
         width: 100%;
         top: 0;
     }
@@ -71,8 +71,8 @@
     }
 
 
-    .second, .four{
-        background-color: black;
+    .second, .four, .five{
+        background-color: #013541;
         background-image: url(./IMG/Cubes.png);
         color: white;
         padding: 20px;
@@ -83,9 +83,11 @@
         font-style: normal;
     }
     .cont{
-        border: 0.5px solid white;
         border-radius: 40px;
         padding: 10px 20px;
+        background-color: #13131379;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+
     }
 
 
@@ -165,10 +167,7 @@
     .faq-item.active .faq-answer {
         display: block;
     }
-    .five{
-        padding: 20px;
-        background-color: #23ABDD;
-    }
+   
 
 
 
@@ -193,21 +192,32 @@
         margin-bottom: 15px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        background-color: #022730;
+        background-color: #131313;
         color: white;
         
       }
       textarea::placeholder, input::placeholder{
-        color: white;
+        color: rgb(196, 196, 196);
       }
   
       button {
-        background: #1a73e8;
-        color: #fff;
+        background: white;
+        color: black;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+      }
+      #submit:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+      }
+
+      footer{
+        background-color: #022730;
+        padding: 20px;
+        color: white;
       }
   
       
