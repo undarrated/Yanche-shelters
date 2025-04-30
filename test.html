@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    .scroll-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 16px;
+  padding: 10px;
+  height: auto;
+  background-color: #f5f5f5;
+}
+
+.image-container {
+  position: relative;
+  flex: 0 0 auto;
+  width: 250px; /* Set fixed width */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.image-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .image-description {
+  opacity: 1;
+}
+
+</style>
+<body>
+    <div class="scroll-container">
+        <div class="image-container">
+          <img src="./IMG/image.png" alt="Image 1">
+          <p class="image-description">Description for Image 1</p>
+        </div>
+        <div class="image-container">
+          <img src="./IMG/image.png" alt="Image 2">
+          <p class="image-description">Description for Image 2</p>
+        </div>
+        <!-- Add more images as needed -->
+      </div>
+      
+      
+      
+</body>
+</html>
