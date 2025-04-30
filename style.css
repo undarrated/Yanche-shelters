@@ -123,16 +123,20 @@
         background-color: #13131379;
         cursor: pointer;
         text-align: center;
-        border: 0.2px solid white;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
         border-radius: 20px;
         padding: 20px;
+    }
+    .box:hover{
+        border: 0.2px solid white;
     }
     .coma{
         background-color: #131313ef;
         padding: 10px;
-        width: 100px;
+        width: 80px;
         border-radius: 10px;
         font-size: 0.6rem;
+        text-align: center;
     }
 
     .faq-container {
