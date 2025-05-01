@@ -3,87 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <meta name="description" content="YANCHE SHELTERS LIMITED is a trusted construction company specializing in residential, commercial, and industrial building projects. We deliver high-quality, durable, and modern structures with expert craftsmanship and innovative designs. Build your dream home or commercial space with us today!">
+    <meta name="keywords" content="construction company, building contractors, real estate development, house construction, commercial buildings, residential construction, Yanche Shelters, architectural design, construction services, property development, affordable housing, home builders, Nigeria construction, durable structures, modern building designs">
+    <title>Yanche Shelters Limited</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/logo-with tag.png">
+     <!-- Open Graph Meta Tags (for Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Learn how to craft a winning resume that gets you hired!">
+    <meta property="og:description" content="YANCHE SHELTERS LIMITED is a trusted construction company specializing in residential, commercial, and industrial building projects. We deliver high-quality, durable, and modern structures with expert craftsmanship and innovative designs. Build your dream home or commercial space with us today!">
+    <meta property="og:image" content="https://yourwebsite.com/images/remote-jobs-thumbnail.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/top-10-remote-jobs">
+   
+
+    <!-- Twitter Card Meta Tags (for Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YANCHE SHELTERS LIMITED">
+    <meta name="twitter:description" content="YANCHE SHELTERS LIMITED is a trusted construction company specializing in residential, commercial, and industrial building projects. We deliver high-quality, durable, and modern structures with expert craftsmanship and innovative designs. Build your dream home or commercial space with us today!">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/remote-jobs-thumbnail.jpg">
+
 </head>
 <style>
+    
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inconsolata:wght@200..900&family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Serif:ital@0;1&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+@media screen and (max-width: 786px) {
+    body{
+        margin: 0;
+        font-family: "Montserrat", serif;
+        font-optical-sizing: auto;
+        background-color: #013541;
+        scroll-behavior: smooth;
+    }
    
- /* Basic Reset */
-body, html {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: sans-serif;
-}
 
-/* Hamburger Icon */
+
+    /* Hamburger Icon */
 #hamburger {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 30px;
-  z-index: 1001;
-  cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    z-index: 1001;
+    cursor: pointer;
+  }
+  
+  /* Mobile Menu */
+  #mobileMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #mobileMenu a {
+    margin: 20px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  #mobileMenu a:hover {
+    text-decoration: underline;
+  }
+
+
+    .content{
+        width: 90%;
+    }
+    p{
+        font-size: 0.95rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    .request{
+        padding: 10px;
+        border: 1px solid white;
+    }
+
+
+    .slideshow-background {
+        width: 100%;
+        height: 100vh; /* Full screen height */
+        position: relative;
+        overflow: hidden;
+        animation: slideShow 50s infinite linear;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      /* Add your content on top of the slideshow */
+      .slideshow-background .content {
+        position: absolute;
+        z-index: 2;
+        color: white;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      /* Keyframes for background image slideshow */
+      @keyframes slideShow {
+        0% {
+          background-image: url('./IMG/sample-slide.png');
+        }
+        33% {
+          background-image: url('./IMG/sample2.png');
+        }
+        66% {
+          background-image: url('./IMG/sample3.png');
+        }
+        100% {
+          background-image: url('./IMG/mobile-bg.png');
+        }
+      }
+
+      #section1, #section2, #section3, #section4, #section5 {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.6s ease-out;
+       
+      }
+      
+      /* Active states */
+      #section1.active,
+      #section2.active,
+      #section3.active,
+      #section4.active,
+      #section5.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+
+    .second, .four, .five{
+        background-color: #013541;
+        background-image: url(./IMG/Cubes.png);
+        color: white;
+        padding: 20px;
+    }
+    h2, h3{
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .cont{
+        border-radius: 40px;
+        padding: 10px 20px;
+        background-color: #13131379;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+    .cont:hover{
+        border: 0.5px solid white;
+    }
+
+
+    .third{
+        padding: 30px 20px;
+        background-image: url(./IMG/mobile-btn.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        text-align: start;
+        color: white;
+    }
+
+    .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 16px;
+        padding: 10px;
+        height: auto;
+        background-color: inherit;
+      }
+      
+      .image-container {
+        position: relative;
+        flex: 0 0 auto;
+        width: 250px; /* Set fixed width */
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      
+      .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+      }
+      
+      .image-description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      .image-container:hover .image-description {
+        opacity: 1;
+      }
+      
+
+
+    .box{
+        background-color: #13131379;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .box:hover{
+        border: 0.2px solid white;
+    }
+    .coma{
+        background-color: #131313ef;
+        padding: 10px;
+        width: 80px;
+        border-radius: 10px;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .faq-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .faq-item {
+        background: white;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .faq-question {
+        background: black;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        outline: none;
+    }
+    .faq-answer {
+        display: none;
+        padding: 15px;
+        background: #13131379;
+        border-top: 1px solid #ddd;
+        font-size: 16px;
+        color: black;
+    }
+    .faq-item.active .faq-answer {
+        display: block;
+    }
+   
+
+
+
+    form {
+        background: inherit;
+        padding: 20px;
+        max-width: 500px;
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+  
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #131313;
+        color: white;
+        
+      }
+      textarea::placeholder, input::placeholder{
+        color: rgb(196, 196, 196);
+      }
+  
+      button {
+        background: white;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #submit:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+      }
+
+      footer{
+        background-color: #022730;
+        padding: 20px;
+        color: white;
+      }
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
+      .big:hover{
+        font-weight: bolder;
+      }
+  
+      
 }
-
-/* Mobile Menu */
-#mobileMenu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100vh;
-  background-color: #111;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 60px 20px;
-  transition: left 0.3s ease;
-  z-index: 1000;
-}
-
-#mobileMenu a {
-  margin: 20px 0;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-#mobileMenu a:hover {
-  text-decoration: underline;
-}
-
-/* Example Sections */
-#home, #services, #projects, #contact {
-  height: 100vh;
-  padding: 50px 20px;
-  font-size: 24px;
-}
-
-
 </style>
 <body>
-  <!-- Hamburger Icon -->
+    
+        
+           <!-- Hamburger Icon -->
 <div id="hamburger" onclick="toggleMenu()">☰</div>
 
 <!-- Slide-in Menu -->
 <div id="mobileMenu">
-  <a href="#home" onclick="closeMenu()">Home</a>
-  <a href="#services" onclick="closeMenu()">Services</a>
-  <a href="#projects" onclick="closeMenu()">Projects</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#sedtion1" onclick="closeMenu()">Home</a>
+  <a href="#section2" onclick="closeMenu()">Services</a>
+  <a href="#section3" onclick="closeMenu()">Projects</a>
+  <a href="#section4" onclick="closeMenu()">Contact</a>
 </div>
+    
 
-<!-- Page Sections -->
-<div id="home">Welcome to Home</div>
-<div id="services">Our Services</div>
-<div id="projects">Our Projects</div>
-<div id="contact">Contact Us</div>
 
+    <div class="slideshow-background" id="section6">
+        <div class="content">
+            <h1>Ground Up Construction in Minna, Niger State</h1>
+            <p> We take pride in delivering high-quality and durable structures that stand the test of time. One of our ongoing projects is the construction of a modern bungalow in Minna, Niger State, designed to blend functionality, aesthetics, and comfort.</p>
+            <p class="request"> Request Bid </p>
+        </div>
+      </div>
+
+    <section class="second" id="section1">
+        <h2>About Yanche Construction</h2>
+        <p>The construction industry faces delays, budget overruns, and inconsistent quality. Yanche Construction solves these problems with modern project management, advanced technologies, and a skilled team.</p>
+
+        <div class="about">
+            <div class="cont">
+                <div>
+                    <h3>10</h3>
+                    <p style="margin-top: -15px;">Years in business</p> 
+                </div>
+                <div>
+                    <h3>10+</h3>
+                    <p style="margin-top: -15px;">Projects completed</p> 
+                </div>
+                <div>
+                    <h3>8</h3>
+                    <p style="margin-top: -15px;">Over employees</p> 
+                </div>
+                <div>
+                    <h3>#2</h3>
+                    <p style="margin-top: -15px;">GC in Nigeria</p> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="third" id="section2">
+        <h2>Our Projects</h2>
+        <p>Ensuring Excellence in Every Project
+            <p>At Yanche Construction, we overcome delays, budget overruns, and quality issues with modern project management, advanced technology, and skilled professionals—delivering projects on time, within budget, and to the highest standards.</p>
+                
+        </p>
+
+        <div class="scroll-container">
+            <div class="image-container">
+              <img src="./IMG/image.png" alt="Image 1">
+              <p class="image-description">Description for Image 1</p>
+            </div>
+            <div class="image-container">
+              <img src="./IMG/image.png" alt="Image 2">
+              <p class="image-description">Description for Image 2</p>
+            </div>
+            <div class="image-container">
+                <img src="./IMG/image.png" alt="Image 2">
+                <p class="image-description">Description for Image 2</p>
+            </div>
+            <div class="image-container">
+                <img src="./IMG/image.png" alt="Image 2">
+                <p class="image-description">Description for Image 2</p>
+            </div>
+            <!-- Add more images as needed -->
+          </div>
+    </section>
+
+    <section class="four" id="section3">
+        <h2>Services</h2>
+        <p>The construction industry faces delays, budget overruns, and inconsistent quality. Yanche Construction solves these problems with modern project management, advanced technologies, and a skilled team.</p>
+
+        <div>
+            <div class="box">
+                <div class="shade">
+                    <img src="./IMG/resident.png" alt="" class="img">
+                    <div style="text-align: start;">
+                        <p class="coma">Commercial</p>
+                    <h3 style="margin: 0;">Ground Up Construction</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" style="margin-top: 15px;">
+                <div class="shade">
+                    <img src="./IMG/sand.png" alt="" class="img">
+                    <div style="text-align: start;">
+                        <p class="coma">Commercial</p>
+                    <h3 style="margin: 0;">New Construction</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" style="margin-top: 15px;">
+                <div class="shade">
+                    <img src="./IMG/recon.png" alt="" class="img">
+                    <div style="text-align: start;">
+                    <div style="display: flex;">
+                        <p class="coma">Commercial</p>
+                        <p class="coma" style="margin-left: 10px;">Residential</p>
+                    </div>
+                    <h3 style="margin: 0;">Renovations</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+
+
+    <section class="third" id="section4">
+        <h2>Frequently Asked Questions(FAQ)</h2>
+        <p>Here are some of the most frequent questions we get asked. Got more Question? Visit our Help center.</p>
+
+        <div class="faq-container">
+    
+            <div class="faq-item">
+                <button class="faq-question"><p>01. Do you do residential and commercial?</p></button>
+                <div class="faq-answer">
+                    You can browse our inventory, contact us for details, and schedule a viewing. We also offer financing options for eligible buyers.
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question"><p>02. How do you price projects?</p></button>
+                <div class="faq-answer">
+                    Yes! We have a wide range of both **brand-new** and **pre-owned** vehicles at competitive prices.
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question"><p>03. What’s your availability?</p></button>
+                <div class="faq-answer">
+                    Absolutely! We offer car trade-in services to help you upgrade to a newer vehicle effortlessly.
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question"><p>04. Do you service Sarasota / Manatee County?</p></button>
+                <div class="faq-answer">
+                    We are located in **Garki 2, Automatic Carwash, Yahuza Suya Spot, Abuja**.
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+
+    <section class="five" id="section5">
+        <h2>Request a bid</h2>
+    <form id="contactForm">
+        <input type="text" id="company" placeholder="Company Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="location" placeholder="Location of Project" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <textarea id="message" placeholder="Your message here..." required></textarea>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </section>
       
-      
-      
-<script>
+
+    <footer>
+        <p>Yanche Shelters is a trusted construction company in Nigeria, specializing in high-quality residential and commercial projects. We focus on modern techniques.</p>
+        <h3>Contact Us</h3>
+        <div style="display: flex; color: rgb(206, 203, 203); margin-bottom: 10px;">
+            <i class="fa-solid fa-envelope" style="font-size: 18px; margin-right: 10px;"></i><p style="margin: 0;">Yanchesheltersltd@gmail.com</p>
+        </div>
+        <div style="display: flex; color: rgb(206, 203, 203); margin-bottom: 10px;">
+            <i class="fa-solid fa-phone" style="font-size: 18px; margin-right: 10px;"></i><p style="margin: 0;">07032750757 - 08107269249</p>
+        </div>
+        <div style="display: flex; color: rgb(206, 203, 203);">
+            <i class="fa-brands fa-instagram" style="font-size: 20px; margin-right: 10px;"></i><p style="margin: 0;">Yanchesheltersltd</p>
+        </div>
+
+        <h3>Site Map</h3>
+        <div style="color: rgb(206, 203, 203); cursor: pointer;">
+        <a href="#section6"><p class="big">Home</p></a>
+        <a href="#section3"><p class="big">Services</p></a>
+        <a href="#section2"><p class="big">Gallery</p></a>
+        <a href="#section1"><p class="big">About Us</p></a>
+        <a href="#section5"><p class="big">Contact Us</p></a>
+        <a href="#section4"><p class="big">FAQ</p></a>
+        </div>
+        <hr style="color: rgb(206, 203, 203);">
+        <p style="color: rgb(206, 203, 203); font-size: 0.6rem;">&copy; 2024 Copyright All Rights Reserved Yanche Shelters Limited</p>
+    
+    
+    </footer>
+
+   
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function () {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+
+<script type="module">
+    // Import Firebase modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+  
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCHMmkNx0BO7f5jhtGgXyo82P9hjcuc7cw",
+      authDomain: "yanche-shelters.firebaseapp.com",
+      projectId: "yanche-shelters",
+      storageBucket: "yanche-shelters.appspot.com",
+      messagingSenderId: "245158535038",
+      appId: "1:245158535038:web:f7256fdb79ced86c929d2f",
+      databaseURL: "https://yanche-shelters-default-rtdb.firebaseio.com"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+  
+    // Handle form submission
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+  
+      const company = document.getElementById("company").value;
+      const email = document.getElementById("email").value;
+      const location = document.getElementById("location").value;
+      const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+  
+      const contactRef = ref(database, 'contacts/');
+      const newContactRef = push(contactRef);
+  
+      set(newContactRef, {
+        company,
+        email,
+        location,
+        phone,
+        message
+      }).then(() => {
+        alert("Form submitted successfully!");
+        document.getElementById("contactForm").reset();
+      }).catch((error) => {
+        alert("Error submitting form: " + error.message);
+      });
+    });
+
+
+    const ids = ['section1', 'section2', 'section3', 'section4', 'section5'];
+  
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('active');
+          }, index * 200);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+
     function toggleMenu() {
       const menu = document.getElementById("mobileMenu");
       menu.style.left = menu.style.left === "0%" ? "-100%" : "0%";
@@ -92,6 +629,7 @@ body, html {
     function closeMenu() {
       document.getElementById("mobileMenu").style.left = "-100%";
     }
+
   </script>
   
 </body>

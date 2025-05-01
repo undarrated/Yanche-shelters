@@ -10,41 +10,47 @@
         font-family: "Montserrat", serif;
         font-optical-sizing: auto;
         background-color: #013541;
+        scroll-behavior: smooth;
     }
-    header{
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-        z-index: 999;
-        background-color: #013541;
-        width: 100%;
-        top: 0;
-    }
-    .logo{
-        padding: 15px;
-    }
-    .dropdown{
-        padding: 15px;
-        margin-right: 15px; 
-    }
-    .desk{
-        display: none;
-    }
-    .navi{
-      padding: 2px;
-      border: none;
-      margin-bottom: -3px;
-      width: 30px;
-      background-color: white;
-      border-radius: 10px;
-    }
-    #nav{
-        padding-top: 10px;
-    }
-    .img{
-        max-width: 100%;
-        height: auto;
-    }
+   
+
+
+    /* Hamburger Icon */
+#hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    z-index: 1001;
+    cursor: pointer;
+  }
+  
+  /* Mobile Menu */
+  #mobileMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #mobileMenu a {
+    margin: 20px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  #mobileMenu a:hover {
+    text-decoration: underline;
+  }
 
 
     .content{
