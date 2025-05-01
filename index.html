@@ -55,7 +55,7 @@
         </div>
       </div>
 
-    <section class="second">
+    <section class="second" id="section1">
         <h2>About Yanche Construction</h2>
         <p>The construction industry faces delays, budget overruns, and inconsistent quality. Yanche Construction solves these problems with modern project management, advanced technologies, and a skilled team.</p>
 
@@ -81,7 +81,7 @@
         </div>
     </section>
 
-    <section class="third">
+    <section class="third" id="section2">
         <h2>Our Projects</h2>
         <p>Ensuring Excellence in Every Project
             <p>At Yanche Construction, we overcome delays, budget overruns, and quality issues with modern project management, advanced technology, and skilled professionals—delivering projects on time, within budget, and to the highest standards.</p>
@@ -109,7 +109,7 @@
           </div>
     </section>
 
-    <section class="four">
+    <section class="four" id="section3">
         <h2>Services</h2>
         <p>The construction industry faces delays, budget overruns, and inconsistent quality. Yanche Construction solves these problems with modern project management, advanced technologies, and a skilled team.</p>
 
@@ -155,7 +155,7 @@
     
 
 
-    <section class="third">
+    <section class="third" id="section4">
         <h2>Frequently Asked Questions(FAQ)</h2>
         <p>Here are some of the most frequent questions we get asked. Got more Question? Visit our Help center.</p>
 
@@ -193,7 +193,7 @@
     </section>
 
 
-    <section class="five">
+    <section class="five" id="section5">
         <h2>Request a bid</h2>
     <form id="contactForm">
         <input type="text" id="company" placeholder="Company Name" required />
@@ -289,6 +289,26 @@
         alert("Error submitting form: " + error.message);
       });
     });
+
+
+    const ids = ['section1', 'section2', 'section3', 'section4', 'section5'];
+  
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('active');
+          }, index * 200);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    
   </script>
   
 </body>

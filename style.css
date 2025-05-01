@@ -98,6 +98,23 @@
         }
       }
 
+      #section1, #section2, #section3, #section4, #section5 {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.6s ease-out;
+       
+      }
+      
+      /* Active states */
+      #section1.active,
+      #section2.active,
+      #section3.active,
+      #section4.active,
+      #section5.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
 
     .second, .four, .five{
         background-color: #013541;
