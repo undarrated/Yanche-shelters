@@ -9,6 +9,7 @@
         margin: 0;
         font-family: "Montserrat", serif;
         font-optical-sizing: auto;
+        background-color: #013541;
     }
     header{
         display: flex;
