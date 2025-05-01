@@ -12,7 +12,11 @@
         background-color: #013541;
         scroll-behavior: smooth;
     }
-
+    
+    .img{
+        max-width: 100%;
+        height: auto;
+    }
    
 
 
@@ -233,7 +237,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
     .faq-question {
-        background: black;
+        background-color: rgba(0, 0, 0, 0.886);
         color: white;
         padding: 15px;
         cursor: pointer;
@@ -277,9 +281,9 @@
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
-        border: 1px solid #ccc;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
         border-radius: 5px;
-        background-color: #131313;
+        background-color: #13131379;
         color: white;
         
       }
